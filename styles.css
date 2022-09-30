@@ -45,11 +45,92 @@ header img {
   width: 100%;
   
 }
- 
+header div {
+  animation: fromTop .7s .2s backwards;
+  
+}
+
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toTop {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+}
+
+
+@keyframes rotate {
+  from {rotate: 360deg;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    
+    transform: translateX(0);
+  }
+}
+
+
+main section {
+  animation: toTop .7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+  
+}
+main section:nth-child(2) {
+  animation-delay: .4s;
+  
+}
+main section:nth-child(3) {
+  animation-delay: .8s;
+  
+}
+main section .channel-list img {
+  animation: rotate 8s backwards;
+}
+main section .channel-list {
+  animation: fromRight 1s backwards;
+}
+
+main section .channel-list li:nth-child(1) {
+  animation: fromRight 1s backwards;
+}
+main section .channel-list li:nth-child(2) {
+  animation: fromRight 3s backwards;
+}
+main section .channel-list li:nth-child(3) {
+  animation: fromRight 6s backwards;
+}
+main section .channel-list li:nth-child(4) {
+  animation: fromRight 8s backwards;
+}
+
+
 
 main {
   display: grid;
-  gap: 24px;
+  gap: 25px;
   max-width: 580px;
   width: 90%;
   margin: 32px auto;
@@ -61,6 +142,7 @@ section {
   background-image: linear-gradient(90deg, #9672fc 0%, #43e7ad 50.52%, #e2d45c 100%);
   padding-top: 4px;
   border-radius: 10px;
+ 
 }
 section h2 {
   letter-spacing: -0.47px;
@@ -86,8 +168,8 @@ section ul li:hover {
 
 
 ul {
-   display: flex;
-   flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
    gap: 16px;
 }
  .game-list img {
